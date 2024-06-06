@@ -1,0 +1,136 @@
+.form{
+    border: 1px solid #3d3c3c;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 18px;
+    background-color: #1a1a1a;
+    color: #b45353;
+    position: relative;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing:0px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: aquamarine;
+}
+
+.title::before{
+    width: 18px;
+    height: 18px;
+}
+
+.title::after{
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+    
+}
+
+.title::before,.title::after {
+    position: absolute;
+    content:"";
+    height: 16px;
+    border: 2px solid white;
+    width: 16px;
+    border-radius:50%;
+    left: 0px;
+    background-color: #74c0c0;
+    
+}
+
+.sub-title , .signin {
+    font-size: 14px;
+    color: #c5c5c5;
+
+}
+
+.signin{
+    text-align: center;
+}
+.signin a{
+    color:#00bfff;
+}
+.signin a:hover{
+    text-decoration: underline rgb(0, 86, 247);
+}
+
+.flex{
+    display: flex;
+    width: 100%;
+    gap:10px;
+}
+
+.form label{
+    position: relative;
+}
+
+.form label .input{
+    border: 1px rgba(255, 255, 255,0.5) solid;
+    background-color: #333;
+    width: 100%;
+    padding: 20px 5px 5px 10px;
+    border-radius: 12px;
+    outline: 0;
+    color: #fff;
+    
+}
+
+.form label .input +span{
+    color:rgba(255,255,255,0.5);
+    position: absolute;
+    left: 10px;
+    top:0px;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+    top: 10.5px;
+}
+
+.form label .input:focus + span,
+.form label .input:valid + span {
+  color: #00bfff;
+  top: 0.5px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+.input {
+    font-size: medium;
+  }
+
+
+  .button{
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    color:white;
+    background-color: #00bfff;
+    font-size: 16px;
+    transform: .3s ease;
+  }
+
+  .button:hover {
+    background-color: #00bfff96;
+  }
+
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
